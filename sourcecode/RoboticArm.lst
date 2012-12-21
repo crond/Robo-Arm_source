@@ -1,0 +1,628 @@
+
+
+HI-TECH Software PRO Macro Assembler (PIC18) V9.66 build 8870 
+                                                       Sun Jan 08 15:36:13 2012
+
+HI-TECH Software Omniscient Code Generator build 8870
+     1                           	processor	18F4431
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 80
+     4                           	opt	pm
+     5                           	psect	text0,global,reloc=2,class=CODE,delta=1
+     6                           	psect	text1,global,reloc=2,class=CODE,delta=1
+     7                           	psect	text2,global,reloc=2,class=CODE,delta=1
+     8                           	psect	text3,global,reloc=2,class=CODE,delta=1
+     9                           	psect	idata,global,class=CODE,delta=1
+    10                           	psect	smallconst,global,reloc=2,class=SMALLCONS
+      +                          T,delta=1
+    11                           	psect	intsave_regs,global,class=BIGRAM,space=1,
+      +                          delta=1
+    12                           	psect	rparam,global,class=COMRAM,space=1,delta=
+      +                          1
+    13                           	psect	pa_nodes,global,reloc=2,class=CODE,delta=
+      +                          1
+    14                           	dabs	1,0x0,1
+    15                           	dabs	1,0x1,1
+    16                           	dabs	1,0x2,1
+    17                           	dabs	1,0x3,1
+    18                           	dabs	1,0x4,1
+    19                           	dabs	1,0x5,1
+    20  000000                     
+    21  000000                     
+    22  000000                     
+    23  000000                     
+    24  000000                     
+    25  000000                     
+    26  000000                     
+    27  000000                     
+    28  000000                     
+    29  000000                     
+    30  000000                     
+    31  000000                     
+    32  000000                     
+    33  000000                     
+    34  000000                     
+    35  000000                     
+    36  000000                     
+    37  000000                     
+    38  000000                     
+    39  000000                     
+    40  000000                     
+    41  000000                     
+    42  000000                     
+    43  000000                     
+    44  000000                     
+    45  000000                     
+    46  000000                     
+    47  000000                     
+    48  000000                     
+    49  000000                     
+    50  000000                     
+    51  000000                     
+    52  000000                     
+    53  000000                     
+    54  000000                     
+    55  000000                     
+    56  000000                     
+    57  000000                     
+    58  000000                     
+    59  000000                     
+    60  000000                     
+    61  000000                     
+    62  000000                     
+    63  000000                     
+    64  000000                     
+    65  000000                     
+    66  000000                     
+    67  000000                     
+    68  000000                     
+    69  000000                     
+    70  000000                     
+    71  000000                     
+    72  000000                     
+    73  000000                     
+    74  000000                     
+    75  000000                     
+    76  000000                     
+    77  000000                     
+    78  000000                     
+    79  000000                     
+    80  000000                     
+    81  000000                     
+    82  000000                     
+    83  000000                     
+    84  000000                     
+    85  000000                     
+    86  000000                     
+    87  000000                     
+    88  000000                     
+    89  000000                     
+    90  000000                     
+    91  000000                     
+    92  000000                     
+    93  000000                     
+    94  000000                     
+    95  000000                     
+    96  000000                     
+    97  000000                     
+    98  000000                     
+    99  000000                     
+   100  000000                     
+   101  000000                     
+   102  000000                     
+   103  000000                     
+   104  000000                     
+   105  000000                     
+   106  000000                     
+   107  000000                     
+   108  000000                     
+   109  000000                     
+   110  000000                     
+   111  000000                     
+   112  000000                     
+   113  000000                     
+   114  000000                     
+   115  000000                     
+   116  000000                     
+   117  000000                     
+   118  000000                     
+   119  000000                     
+   120  000000                     
+   121                           
+   122                           	psect	text0
+   123                           ;Data sizes: Strings 0, constant 88, data 6, bss
+      +                           0, persistent 0 stack 2
+   124                           ; *************** function _main ***************
+      +                          **
+   125                           ; Defined at:
+   126                           ;		line 63 in file "E:\MPLAB Projects\Robo\sourc
+      +                          ecode\src\ROBO_ARM.c"
+   127                           ; Parameters:
+   128                           ;		None
+   129                           ; Auto variables:
+   130                           ;		None
+   131                           ; Return value:
+   132                           ;		type: void 
+   133                           ;		size: 0
+   134                           ; Registers used:
+   135                           ;		wreg, status,2, status,0, prodl, prodh, cstac
+      +                          k
+   136                           ; Tracked objects:
+   137                           ;		On entry : 0/0
+   138                           ;		On exit  : 0/0
+   139                           ;		Unchanged: FFFFFFFF/0
+   140                           ; Data sizes:
+   141                           ;		Autos:    0
+   142                           ;		Params:   0
+   143                           ;		Temp:     0
+   144                           ;		Total:    0
+   145                           ; This function calls:
+   146                           ;		_delay
+   147                           ;		_Load_Elbow
+   148                           ; This function is called by:
+   149                           ;		Startup code after reset
+   150                           ; This function uses a non-reentrant model
+   151                           ; 
+   152  000000                     
+   153                           ;pic18f4431.h: 302: extern volatile unsigned cha
+      +                          r DFLTCON @ 0xF60;
+   154                           ;pic18f4431.h: 304: extern volatile bit FLT1EN @
+      +                           ((unsigned)&DFLTCON*8)+3;
+   155                           ;pic18f4431.h: 305: extern volatile bit FLT2EN @
+      +                           ((unsigned)&DFLTCON*8)+4;
+   156                           ;pic18f4431.h: 306: extern volatile bit FLT3EN @
+      +                           ((unsigned)&DFLTCON*8)+5;
+   157                           ;pic18f4431.h: 307: extern volatile bit FLT4EN @
+      +                           ((unsigned)&DFLTCON*8)+6;
+   158                           ;pic18f4431.h: 308: extern volatile bit FLTCK0 @
+      +                           ((unsigned)&DFLTCON*8)+0;
+   159                           ;pic18f4431.h: 309: extern volatile bit FLTCK1 @
+      +                           ((unsigned)&DFLTCON*8)+1;
+   160  000360                     _main:
+   161                           	opt stack 31
+   162                           ; BSR set to: ?
+   163                           ;ROBO_ARM.c: 66: ANSEL0 = 0x00;
+   164  000360  6AB8               	clrf	4024,c	;volatile
+   165                           ;ROBO_ARM.c: 67: ANSEL1 = 0x00;
+   166  000362  6AB9               	clrf	4025,c	;volatile
+   167                           ;ROBO_ARM.c: 68: TRISA = 0x8C;
+   168  000364  0E8C               	movlw	140
+   169  000366  6E92               	movwf	3986,c	;volatile
+   170                           ;ROBO_ARM.c: 69: TRISB = 0XC0;
+   171  000368  0EC0               	movlw	192
+   172  00036A  6E93               	movwf	3987,c	;volatile
+   173                           ;ROBO_ARM.c: 70: TRISC = 0xF9;
+   174  00036C  0EF9               	movlw	249
+   175  00036E  6E94               	movwf	3988,c	;volatile
+   176                           ;ROBO_ARM.c: 71: TRISD = 0x3F;
+   177  000370  0E3F               	movlw	63
+   178  000372  6E95               	movwf	3989,c	;volatile
+   179                           ;ROBO_ARM.c: 72: TRISE = 0x04;
+   180  000374  0E04               	movlw	4
+   181  000376  6E96               	movwf	3990,c	;volatile
+   182                           ;ROBO_ARM.c: 73: OSCCON = 0X3E;
+   183  000378  0E3E               	movlw	62
+   184  00037A  6ED3               	movwf	4051,c	;volatile
+   185                           ;ROBO_ARM.c: 76: PR2 = 0x9B;
+   186  00037C  0E9B               	movlw	155
+   187  00037E  6ECB               	movwf	4043,c	;volatile
+   188                           ;ROBO_ARM.c: 77: T2CON = 0x06;
+   189  000380  0E06               	movlw	6
+   190  000382  6ECA               	movwf	4042,c	;volatile
+   191                           ;ROBO_ARM.c: 80: PWMCON0 = 0xDF;
+   192  000384  0EDF               	movlw	223
+   193  000386  6E6F               	movwf	3951,c	;volatile
+   194                           ;ROBO_ARM.c: 81: PTCON0 = 0x00;
+   195  000388  6A7F               	clrf	3967,c	;volatile
+   196                           ;ROBO_ARM.c: 82: PTPERL = 0xC4;
+   197  00038A  0EC4               	movlw	196
+   198  00038C  6E7B               	movwf	3963,c	;volatile
+   199                           ;ROBO_ARM.c: 83: PTPERH = 0x09;
+   200  00038E  0E09               	movlw	9
+   201  000390  6E7A               	movwf	3962,c	;volatile
+   202                           ;ROBO_ARM.c: 84: PTMRL = 0xC4;
+   203  000392  0EC4               	movlw	196
+   204  000394  6E7D               	movwf	3965,c	;volatile
+   205                           ;ROBO_ARM.c: 85: PTMRH = 0x09;
+   206  000396  0E09               	movlw	9
+   207  000398  6E7C               	movwf	3964,c	;volatile
+   208                           ;ROBO_ARM.c: 86: PTCON1 = 0x80;
+   209  00039A  0E80               	movlw	128
+   210  00039C  6E7E               	movwf	3966,c	;volatile
+   211                           ;ROBO_ARM.c: 87: PORTA = 0xFF;
+   212  00039E  6880               	setf	3968,c	;volatile
+   213                           ;ROBO_ARM.c: 90: CCPR1L = 0x0B;
+   214  0003A0  0E0B               	movlw	11
+   215  0003A2  6EBE               	movwf	4030,c	;volatile
+   216                           ;ROBO_ARM.c: 91: CCP1CON = 0x3c;
+   217  0003A4  0E3C               	movlw	60
+   218  0003A6  6EBD               	movwf	4029,c	;volatile
+   219                           ;ROBO_ARM.c: 95: delay(20000);
+   220  0003A8  0E20               	movlw	32
+   221  0003AA  6E06               	movwf	?_delay,c
+   222  0003AC  0E4E               	movlw	78
+   223  0003AE  6E07               	movwf	?_delay+1,c
+   224  0003B0  EC11  F002         	call	_delay	;wreg free
+   225                           ;ROBO_ARM.c: 97: CCPR1L = 0x0C ;
+   226  0003B4  0E0C               	movlw	12
+   227  0003B6  6EBE               	movwf	4030,c	;volatile
+   228                           ;ROBO_ARM.c: 98: CCP1CON = 0x3c;
+   229  0003B8  0E3C               	movlw	60
+   230  0003BA  6EBD               	movwf	4029,c	;volatile
+   231                           ;ROBO_ARM.c: 100: delay(20000);
+   232  0003BC  0E20               	movlw	32
+   233  0003BE  6E06               	movwf	?_delay,c
+   234  0003C0  0E4E               	movlw	78
+   235  0003C2  6E07               	movwf	?_delay+1,c
+   236  0003C4  EC11  F002         	call	_delay	;wreg free
+   237                           ;ROBO_ARM.c: 103: CCPR1L = 0x0D ;
+   238  0003C8  0E0D               	movlw	13
+   239  0003CA  6EBE               	movwf	4030,c	;volatile
+   240                           ;ROBO_ARM.c: 104: CCP1CON = 0x3c;
+   241  0003CC  0E3C               	movlw	60
+   242  0003CE  6EBD               	movwf	4029,c	;volatile
+   243                           ;ROBO_ARM.c: 106: delay(20000);
+   244  0003D0  0E20               	movlw	32
+   245  0003D2  6E06               	movwf	?_delay,c
+   246  0003D4  0E4E               	movlw	78
+   247  0003D6  6E07               	movwf	?_delay+1,c
+   248  0003D8  EC11  F002         	call	_delay	;wreg free
+   249                           ;ROBO_ARM.c: 108: CCPR1L = 0x0F ;
+   250  0003DC  0E0F               	movlw	15
+   251  0003DE  6EBE               	movwf	4030,c	;volatile
+   252                           ;ROBO_ARM.c: 109: CCP1CON = 0x2c;
+   253  0003E0  0E2C               	movlw	44
+   254  0003E2  6EBD               	movwf	4029,c	;volatile
+   255                           ;ROBO_ARM.c: 112: while(1);
+   256                           ; BSR set to: ?
+   257  0003E4                     l244:
+   258                           ; BSR set to: ?
+   259  0003E4  D7FF               	goto	l244
+   260  0003E6                     __end_of_main:
+   261                           	opt stack 0
+   262                           
+   263                           	psect	text1
+   264                           ; =============== function _main ends ==========
+      +                          ==
+   265                           ; *************** function _Load_Elbow *********
+      +                          ********
+   266                           ; Defined at:
+   267                           ;		line 156 in file "E:\MPLAB Projects\Robo\sour
+      +                          cecode\src\ROBO_ARM.c"
+   268                           ; Parameters:
+   269                           ;		None
+   270                           ; Auto variables:
+   271                           ;		None
+   272                           ; Return value:
+   273                           ;		type: void 
+   274                           ;		size: 0
+   275                           ; Registers used:
+   276                           ;		wreg, status,2, status,0, tblptrl, tblptrh, t
+      +                          blptru, tablat
+   277                           ; Tracked objects:
+   278                           ;		On entry : 0/0
+   279                           ;		On exit  : 0/0
+   280                           ;		Unchanged: FFFFFFFF/0
+   281                           ; Data sizes:
+   282                           ;		Autos:    0
+   283                           ;		Params:   0
+   284                           ;		Temp:     2
+   285                           ;		Total:    2
+   286                           ; This function calls:
+   287                           ;		Nothing
+   288                           ; This function is called by:
+   289                           ;		_main
+   290                           ;		_Load_Default
+   291                           ;		_Pick
+   292                           ;		_Place
+   293                           ; This function uses a non-reentrant model
+   294                           ; 
+   295  000000                     
+   296                           ;ROBO_ARM.c: 155: void Load_Elbow()
+   297                           ;ROBO_ARM.c: 156: {
+   298  0003E6                     _Load_Elbow:
+   299                           	opt stack 30
+   300                           ; BSR set to: ?
+   301  0003E6  C001 F006          	movff	1,??_Load_Elbow
+   302  0003EA  3A06               	swapf	??_Load_Elbow,f,c
+   303  0003EC  0E0F               	movlw	15
+   304  0003EE  1606               	andwf	??_Load_Elbow,f,c
+   305  0003F0  5006               	movf	??_Load_Elbow,w,c
+   306  0003F2  0F55               	addlw	low _reg_PDCH
+   307  0003F4  6E07               	movwf	(??_Load_Elbow+1)& (0+255),c
+   308  0003F6  C007  FFF6         	movff	??_Load_Elbow+1,tblptrl
+   309  0003FA  0E03               	movlw	high __Lsmallconst
+   310  0003FC  6EF7               	movwf	tblptrh,c
+   311  0003FE  0008               	tblrd		*
+   312  000400  CFF5 FF78          	movff	tablat,3960	;volatile
+   313                           ;ROBO_ARM.c: 158: PDC0L = reg_PDCL[deg_elbow & 0
+      +                          x0F];
+   314  000404  C001 F006          	movff	1,??_Load_Elbow
+   315  000408  0E0F               	movlw	15
+   316  00040A  1606               	andwf	??_Load_Elbow,f,c
+   317  00040C  5006               	movf	??_Load_Elbow,w,c
+   318  00040E  0F41               	addlw	low _reg_PDCL
+   319  000410  6E07               	movwf	(??_Load_Elbow+1)& (0+255),c
+   320  000412  C007  FFF6         	movff	??_Load_Elbow+1,tblptrl
+   321  000416  0E03               	movlw	high __Lsmallconst
+   322  000418  6EF7               	movwf	tblptrh,c
+   323  00041A  0008               	tblrd		*
+   324  00041C  CFF5 FF79          	movff	tablat,3961	;volatile
+   325                           ;ROBO_ARM.c: 159: }
+   326                           ; BSR set to: ?
+   327  000420  0012               	return	
+   328  000422                     __end_of_Load_Elbow:
+   329                           	opt stack 0
+   330                           
+   331                           	psect	text2
+   332                           ; =============== function _Load_Elbow ends ====
+      +                          ========
+   333                           ; *************** function _delay **************
+      +                          ***
+   334                           ; Defined at:
+   335                           ;		line 135 in file "E:\MPLAB Projects\Robo\sour
+      +                          cecode\src\ROBO_ARM.c"
+   336                           ; Parameters:
+   337                           ;		count          size:   2offs:   0	type: unsig
+      +                          ned int 
+   338                           ; Auto variables:
+   339                           ;		i           	       	type: unsigned int 
+   340                           ; Return value:
+   341                           ;		type: void 
+   342                           ;		size: 0
+   343                           ; Registers used:
+   344                           ;		wreg, status,2, status,0, prodl, prodh
+   345                           ; Tracked objects:
+   346                           ;		On entry : 0/0
+   347                           ;		On exit  : 0/0
+   348                           ;		Unchanged: FFFFFFFF/0
+   349                           ; Data sizes:
+   350                           ;		Autos:    0
+   351                           ;		Params:   2
+   352                           ;		Temp:     0
+   353                           ;		Total:    2
+   354                           ; This function calls:
+   355                           ;		Nothing
+   356                           ; This function is called by:
+   357                           ;		_main
+   358                           ;		_Load_Default
+   359                           ;		_Pick
+   360                           ;		_Place
+   361                           ; This function uses a non-reentrant model
+   362                           ; 
+   363  000000                     
+   364                           ;ROBO_ARM.c: 134: void delay(unsigned int count)
+   365                           ;ROBO_ARM.c: 135: {
+   366  000422                     _delay:
+   367                           	opt stack 30
+   368                           ; BSR set to: ?
+   369                           ;ROBO_ARM.c: 136: unsigned int i;
+   370                           ;ROBO_ARM.c: 137: for(i=0;i<count;i++);
+   371  000422  6AF3               	clrf	prodl,c
+   372  000424  6AF4               	clrf	prodh,c
+   373  000426                     l254:
+   374                           ; BSR set to: ?
+   375  000426  5006               	movf	?_delay,w,c
+   376  000428  5CF3               	subwf	prodl,w,c
+   377  00042A  5007               	movf	?_delay+1,w,c
+   378  00042C  58F4               	subwfb	prodh,w,c
+   379  00042E  E203               	bc	u20
+   380                           ; BSR set to: ?
+   381  000430  4AF3               	infsnz	prodl,f,c
+   382  000432  2AF4               	incf	prodh,f,c
+   383  000434  D7F8               	goto	l254
+   384  000436                     u20:
+   385                           ; BSR set to: ?
+   386                           ;ROBO_ARM.c: 138: }
+   387                           ; BSR set to: ?
+   388  000436  0012               	return	
+   389  000438                     __end_of_delay:
+   390                           	opt stack 0
+   391                           
+   392                           	psect	text3
+   393                           ; =============== function _delay ends =========
+      +                          ===
+   394  000000                     	;_deg_base
+   395  000000                     	;_deg_elbow
+   396  000000                     	;_deg_grip
+   397  000000                     	;_deg_r_grip
+   398  000000                     	;_deg_servo
+   399  000000                     	;_deg_wrist
+   400                           
+   401                           	psect	idata
+   402                           ;initializer for _deg_base
+   403  00035A  14                 	db	20
+   404                           ;initializer for _deg_elbow
+   405  00035B  0A                 	db	10
+   406                           ;initializer for _deg_grip
+   407  00035C  1F                 	db	31
+   408                           ;initializer for _deg_r_grip
+   409  00035D  1F                 	db	31
+   410                           ;initializer for _deg_servo
+   411  00035E  1F                 	db	31
+   412                           ;initializer for _deg_wrist
+   413  00035F  1F                 	db	31
+   414                           
+   415                           	psect	smallconst
+   416  000300  00                 	db	0	;reserve
+   417  000301                     _reg_CCP:
+   418                           	opt stack 0
+   419  000301  04                 	db	4
+   420  000302  04                 	db	4
+   421  000303  04                 	db	4
+   422  000304  04                 	db	4
+   423  000305  05                 	db	5
+   424  000306  05                 	db	5
+   425  000307  05                 	db	5
+   426  000308  05                 	db	5
+   427  000309  06                 	db	6
+   428  00030A  06                 	db	6
+   429  00030B  06                 	db	6
+   430  00030C  06                 	db	6
+   431  00030D  07                 	db	7
+   432  00030E  07                 	db	7
+   433  00030F  07                 	db	7
+   434  000310  07                 	db	7
+   435  000311  08                 	db	8
+   436  000312  08                 	db	8
+   437  000313  08                 	db	8
+   438  000314  08                 	db	8
+   439  000315  09                 	db	9
+   440  000316  09                 	db	9
+   441  000317  09                 	db	9
+   442  000318  09                 	db	9
+   443  000319  0A                 	db	10
+   444  00031A  0A                 	db	10
+   445  00031B  0A                 	db	10
+   446  00031C  0A                 	db	10
+   447  00031D  0B                 	db	11
+   448  00031E  0B                 	db	11
+   449  00031F  0B                 	db	11
+   450  000320  0B                 	db	11
+   451  000321  0C                 	db	12
+   452  000322  0C                 	db	12
+   453  000323  0C                 	db	12
+   454  000324  0C                 	db	12
+   455  000325  0D                 	db	13
+   456  000326  0D                 	db	13
+   457  000327  0D                 	db	13
+   458  000328  0D                 	db	13
+   459  000329  0E                 	db	14
+   460  00032A  0E                 	db	14
+   461  00032B  0E                 	db	14
+   462  00032C  0E                 	db	14
+   463  00032D  0F                 	db	15
+   464  00032E  0F                 	db	15
+   465  00032F  0F                 	db	15
+   466  000330  0F                 	db	15
+   467  000331  10                 	db	16
+   468  000332  10                 	db	16
+   469  000333  10                 	db	16
+   470  000334  10                 	db	16
+   471  000335  11                 	db	17
+   472  000336  11                 	db	17
+   473  000337  11                 	db	17
+   474  000338  11                 	db	17
+   475  000339  12                 	db	18
+   476  00033A  12                 	db	18
+   477  00033B  12                 	db	18
+   478  00033C  12                 	db	18
+   479  00033D  13                 	db	19
+   480  00033E  13                 	db	19
+   481  00033F  13                 	db	19
+   482  000340  13                 	db	19
+   483  000341                     _reg_PDCL:
+   484                           	opt stack 0
+   485  000341  00                 	db	0
+   486  000342  10                 	db	16
+   487  000343  20                 	db	32
+   488  000344  30                 	db	48
+   489  000345  40                 	db	64
+   490  000346  50                 	db	80
+   491  000347  60                 	db	96
+   492  000348  70                 	db	112
+   493  000349  80                 	db	128
+   494  00034A  90                 	db	144
+   495  00034B  A0                 	db	160
+   496  00034C  B0                 	db	176
+   497  00034D  C0                 	db	192
+   498  00034E  D0                 	db	208
+   499  00034F  E0                 	db	224
+   500  000350  F0                 	db	240
+   501  000351                     _reg_CON:
+   502                           	opt stack 0
+   503  000351  0C                 	db	12
+   504  000352  1C                 	db	28
+   505  000353  2C                 	db	44
+   506  000354  3C                 	db	60
+   507  000355                     _reg_PDCH:
+   508                           	opt stack 0
+   509  000355  01                 	db	1
+   510  000356  02                 	db	2
+   511  000357  03                 	db	3
+   512  000358  04                 	db	4
+   513  000000                     
+   514  000000                     
+   515  000000                     
+   516  000000                     
+   517  000000                     
+   518  000000                     
+   519  000000                     
+   520  000000                     
+   521  000000                     
+   522  000000                     
+   523  000000                     
+   524  000000                     
+   525  000000                     
+   526  000000                     
+   527  000000                     
+   528  000000                     
+   529  000000                     
+   530  000000                     
+   531  000000                     
+   532  000000                     
+   533  000000                     
+   534  000000                     
+   535  000000                     
+   536  000000                     
+   537  000000                     
+   538  000000                     
+   539  000000                     
+   540  000000                     
+   541  000000                     
+   542  000000                     
+   543  000359  00                 	db	0	; dummy byte at the end
+   544                           
+   545                           	psect	rparam
+   546  000000                     
+   547  000000                     
+   548  000000                     
+   549  000000                     
+   550                           tblptrh	equ	0xFF7
+   551                           tblptrl	equ	0xFF6
+   552                           tablat	equ	0xFF5
+   553                           prodh	equ	0xFF4
+   554                           prodl	equ	0xFF3
+
+
+HI-TECH Software PICC-18 Macro Assembler V9.66 build 8870 
+Symbol Table                                           Sun Jan 08 15:36:13 2012
+
+                 u20 0436                  l244 03E4  
+                l254 0426                  _PR2 000FCB  
+               _main 0360                 prodl 000FF3  
+               start 0000                ?_main 0006  
+              _T2CON 000FCA                _PDC0H 000F78  
+              _PDC1H 000F76                _PDC2H 000F74  
+              _PDC0L 000F79                _PDC3H 000F72  
+              _PDC1L 000F77                _PDC2L 000F75  
+              _PDC3L 000F73                _PORTA 000F80  
+              _PTMRH 000F7C                _PTMRL 000F7D  
+              _TRISA 000F92                _TRISB 000F93  
+              _TRISC 000F94                _TRISD 000F95  
+              _TRISE 000F96                _delay 0422  
+              tablat 000FF5                status 000FD8  
+         _Load_Elbow 03E6         __end_of_main 03E6  
+             ??_main 0006        __activetblptr 000002  
+             ?_delay 0006               _CCPR1L 000FBE  
+             _CCPR2L 000FBB               _ANSEL0 000FB8  
+             _ANSEL1 000FB9               _OSCCON 000FD3  
+             _PTCON0 000F7F               _PTCON1 000F7E  
+             _PTPERH 000F7A               _PTPERL 000F7B  
+             __Ldata 000000         __mediumconst 035A  
+             tblptrh 000FF7               tblptrl 000FF6  
+         __accesstop 0060          ?_Load_Elbow 0006  
+      __end_of_delay 0438              ??_delay 0008  
+         _deg_r_grip 000003              _CCP1CON 000FBD  
+            _CCP2CON 000FBA              _PWMCON0 000F6F  
+            __Hdata0 000006              __Ldata0 000000  
+            __Hparam 0008              __Lparam 0006  
+            __ramtop 0300              _reg_CCP 0301  
+            _reg_CON 0351           delay@count 0006  
+      __Lmediumconst 035A         ??_Load_Elbow 0006  
+ __end_of_Load_Elbow 0422            _deg_elbow 000001  
+          _deg_servo 000004            _deg_wrist 000005  
+        __smallconst 0300             __Hrparam 0008  
+           __Lrparam 0006         __Lsmallconst 0300  
+           _deg_base 000000             _deg_grip 000002  
+           _reg_PDCH 0355             _reg_PDCL 0341  

@@ -1,0 +1,106 @@
+[p GLOBOPT AUTOSTATIC LFSROK SPACEOPT EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4431 ]
+"63 E:\MPLAB Projects\Robo\sourcecode\src\ROBO_ARM.c
+[v _main `(v  1 e 0 0 ]
+"135
+[v _delay `(v  1 e 0 0 ]
+"156
+[v _Load_Elbow `(v  1 e 0 0 ]
+"574 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.66\include\pic18f4431.h
+[v _PWMCON0 `Vuc  1 e 1 @3951 ]
+"613
+[v _PDC3H `Vuc  1 e 1 @3954 ]
+"622
+[v _PDC3L `Vuc  1 e 1 @3955 ]
+"626
+[v _PDC2H `Vuc  1 e 1 @3956 ]
+"635
+[v _PDC2L `Vuc  1 e 1 @3957 ]
+"639
+[v _PDC1H `Vuc  1 e 1 @3958 ]
+"648
+[v _PDC1L `Vuc  1 e 1 @3959 ]
+"652
+[v _PDC0H `Vuc  1 e 1 @3960 ]
+"661
+[v _PDC0L `Vuc  1 e 1 @3961 ]
+"665
+[v _PTPERH `Vuc  1 e 1 @3962 ]
+"674
+[v _PTPERL `Vuc  1 e 1 @3963 ]
+"678
+[v _PTMRH `Vuc  1 e 1 @3964 ]
+"687
+[v _PTMRL `Vuc  1 e 1 @3965 ]
+"691
+[v _PTCON1 `Vuc  1 e 1 @3966 ]
+"704
+[v _PTCON0 `Vuc  1 e 1 @3967 ]
+"733
+[v _PORTA `Vuc  1 e 1 @3968 ]
+"1083
+[v _TRISA `Vuc  1 e 1 @3986 ]
+"1126
+[v _TRISB `Vuc  1 e 1 @3987 ]
+"1169
+[v _TRISC `Vuc  1 e 1 @3988 ]
+"1212
+[v _TRISD `Vuc  1 e 1 @3989 ]
+"1255
+[v _TRISE `Vuc  1 e 1 @3990 ]
+"1806
+[v _ANSEL0 `Vuc  1 e 1 @4024 ]
+"1830
+[v _ANSEL1 `Vuc  1 e 1 @4025 ]
+"1840
+[v _CCP2CON `Vuc  1 e 1 @4026 ]
+"1872
+[v _CCPR2L `Vuc  1 e 1 @4027 ]
+"1883
+[v _CCP1CON `Vuc  1 e 1 @4029 ]
+"1915
+[v _CCPR1L `Vuc  1 e 1 @4030 ]
+"2161
+[v _T2CON `Vuc  1 e 1 @4042 ]
+"2199
+[v _PR2 `Vuc  1 e 1 @4043 ]
+"2330
+[v _OSCCON `Vuc  1 e 1 @4051 ]
+"29 E:\MPLAB Projects\Robo\sourcecode\src\ROBO_ARM.c
+[v _deg_servo `uc  1 e 1 @4 ]
+"30
+[v _deg_base `uc  1 e 1 @0 ]
+"31
+[v _deg_elbow `uc  1 e 1 @1 ]
+"32
+[v _deg_wrist `uc  1 e 1 @5 ]
+"33
+[v _deg_r_grip `uc  1 e 1 @3 ]
+"34
+[v _deg_grip `uc  1 e 1 @2 ]
+"36
+[v _reg_CON `DC[4]uc  1 e 4 0 ]
+"38
+[v _reg_CCP `DC[64]uc  1 e 64 0 ]
+"55
+[v _reg_PDCH `DC[4]uc  1 e 4 0 ]
+"57
+[v _reg_PDCL `DC[16]uc  1 e 16 0 ]
+"63
+[v _main `(v  1 e 0 0 ]
+{
+"130
+} 0
+"156
+[v _Load_Elbow `(v  1 e 0 0 ]
+{
+"159
+} 0
+"135
+[v _delay `(v  1 e 0 0 ]
+{
+[v _count `ui  1 p 2 0 ]
+"138
+} 0

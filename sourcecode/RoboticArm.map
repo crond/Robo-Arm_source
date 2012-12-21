@@ -1,0 +1,282 @@
+HI-TECH Software C Compiler 
+
+Linker command line:
+
+--edf=C:\Program Files\HI-TECH Software\PICC-18\PRO\9.66\dat\en_msgs.txt \
+  -cs -h+RoboticArm.sym -z -Q18F4431 -ol.obj -MRoboticArm.map -E1 \
+  -ACODE=00h-03FFFh -ACONST=00h-03FFFh -ASMALLCONST=0300h-03FFhx61 \
+  -AMEDIUMCONST=0300h-03FFFh -ARAM=00h-0FFhx2,0200h-029Fh \
+  -ABIGRAM=00h-029Fh -ACOMRAM=00h-05Fh -AABS1=00h-029Fh -ABANK0=00h-0FFh \
+  -ABANK1=0100h-01FFh -ABANK2=0200h-029Fh -ANVRAM=0200h-029Fh \
+  -preset_vec=00h,intcode,intcodelo,powerup,init,end_init -pramtop=0300h \
+  -psmallconst=SMALLCONST -pmediumconst=MEDIUMCONST -pconst=CONST \
+  -prparam=COMRAM -AFARRAM=00h-00h -ACONFIG=0300000h-030000Dh \
+  -pconfig=CONFIG -AIDLOC=0200000h-0200007h -pidloc=IDLOC \
+  -AEEDATA=0F00000h-0F000FFh -peeprom_data=EEDATA \
+  -prdata=COMRAM,nvrram=COMRAM,nvbit=COMRAM,rbss=COMRAM,rbit=COMRAM \
+  -pfarbss=FARRAM,fardata=FARRAM \
+  -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
+  -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE startup.obj \
+  RoboticArm.obj 
+
+Object code version is 3.10
+
+Machine type is 18F4431
+
+Call graph: (short form)
+
+*_main size 0,0 offset 0
+*    _delay size 2,0 offset 0
+*    _Load_Elbow size 0,2 offset 0
+
+Estimated maximum call depth: 1
+
+
+                Name          Link     Load   Length Selector Space Scale
+startup.obj     init             0        0       14       0     0
+                end_init        14       14       1A       0     0
+RoboticArm.obj  smallcons      300      300       5A     180     0
+                idata          35A      35A        6     1AD     0
+                text0          360      360       86     1AD     0
+                text1          3E6      3E6       3C     1AD     0
+                text2          422      422       16     1AD     0
+
+COMMON          rparam           6        6        2       6     1
+
+TOTAL           Name          Link     Load   Length  Space
+        CLASS   CODE           
+                init             0        0       14     0
+                end_init        14       14       1A     0
+                idata          35A      35A        6     0
+                text0          360      360       86     0
+                text1          3E6      3E6       3C     0
+                text2          422      422       16     0
+
+        CLASS   CONST          
+
+        CLASS   SMALLCONST     
+                smallcons      300      300       5A     0
+
+        CLASS   MEDIUMCONST    
+
+        CLASS   RAM            
+
+        CLASS   BIGRAM         
+
+        CLASS   COMRAM         
+                rparam           6        6        2     1
+
+        CLASS   ABS1           
+                abs_s1           0        0        6     1
+
+        CLASS   BANK0          
+
+        CLASS   BANK1          
+
+        CLASS   BANK2          
+
+        CLASS   NVRAM          
+
+        CLASS   FARRAM         
+
+        CLASS   CONFIG         
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name           Load    Length   Top     Selector    Space Class
+
+                reset_vec       000000  00002E  00002E         0       0  CODE    
+                rparam          000006  000002  000008         6       1  COMRAM  
+                smallconst      000300  00005A  00035A       180       0  SMALLCON
+                idata           00035A  0000DE  000438       1AD       0  CODE    
+
+
+UNUSED ADDRESS RANGES
+
+        BANK0            000008-0000FF
+        BANK1            000100-0001FF
+        BANK2            000200-00029F
+        BIGRAM           000008-00029F
+        CODE             00002E-0002FF
+                         000438-003FFF
+        COMRAM           000008-00005F
+        CONFIG           300000-30000D
+        CONST            00002E-0002FF
+                         000438-003FFF
+        EEDATA           F00000-F000FF
+        IDLOC            200000-200007
+        MEDIUMCONST      000438-003FFF
+        NVRAM            000200-00029F
+        RAM              000008-00029F
+        SMALLCONST       000438-003FFF
+
+                                  Symbol Table
+
+??_Load_Elbow       rparam       000006
+??_delay            rparam       000008
+??_main             rparam       000006
+?_Load_Elbow        rparam       000006
+?_delay             rparam       000006
+?_main              rparam       000006
+_ANSEL0             (abs)        000FB8
+_ANSEL1             (abs)        000FB9
+_CCP1CON            (abs)        000FBD
+_CCP2CON            (abs)        000FBA
+_CCPR1L             (abs)        000FBE
+_CCPR2L             (abs)        000FBB
+_Load_Elbow         text1        0003E6
+_OSCCON             (abs)        000FD3
+_PDC0H              (abs)        000F78
+_PDC0L              (abs)        000F79
+_PDC1H              (abs)        000F76
+_PDC1L              (abs)        000F77
+_PDC2H              (abs)        000F74
+_PDC2L              (abs)        000F75
+_PDC3H              (abs)        000F72
+_PDC3L              (abs)        000F73
+_PORTA              (abs)        000F80
+_PR2                (abs)        000FCB
+_PTCON0             (abs)        000F7F
+_PTCON1             (abs)        000F7E
+_PTMRH              (abs)        000F7C
+_PTMRL              (abs)        000F7D
+_PTPERH             (abs)        000F7A
+_PTPERL             (abs)        000F7B
+_PWMCON0            (abs)        000F6F
+_T2CON              (abs)        000FCA
+_TRISA              (abs)        000F92
+_TRISB              (abs)        000F93
+_TRISC              (abs)        000F94
+_TRISD              (abs)        000F95
+_TRISE              (abs)        000F96
+__Bnvbit            nvbit        000008
+__Brbit             rbit         000008
+__HRAM              (abs)        000000
+__Hbigbss           bigbss       000008
+__Hbigdata          bigdata      000008
+__Hbss              bss          000008
+__Hclrtext          clrtext      000360
+__Hconfig           config       300000
+__Hconst            const        00035A
+__Hdata             data         000360
+__Hdata0            (abs)        000006
+__Heeprom_data      eeprom_data  F00000
+__Hend_init         end_init     00002E
+__Hfarbss           farbss       000000
+__Hfardata          fardata      000000
+__Hibigdata         ibigdata     000360
+__Hidata            idata        000360
+__Hidloc            idloc        200000
+__Hifardata         ifardata     000360
+__Hinit             init         000014
+__Hintcode          intcode      000000
+__Hintcodelo        intcodelo    000000
+__Hintentry         intentry     000360
+__Hintret           intret       000360
+__Hintsave_regs     intsave_regs 000008
+__Hirdata           irdata       000360
+__Hmediumconst      mediumconst  00035A
+__Hnvbit            nvbit        000040
+__Hnvram            nvram        000360
+__Hnvrram           nvrram       000008
+__Hpa_nodes         pa_nodes     000360
+__Hparam            rparam       000008
+__Hparam0           param0       000360
+__Hparam1           param1       000360
+__Hparam2           param2       000360
+__Hpowerup          powerup      000000
+__Hramtop           ramtop       000300
+__Hrbit             rbit         000040
+__Hrbss             rbss         000008
+__Hrdata            rdata        000008
+__Hreset_vec        reset_vec    000000
+__Hrparam           rparam       000008
+__Hsmallconst       smallconst   00035A
+__Hstruct           struct       000008
+__Htemp             temp         000008
+__Htext             text         000360
+__Htext0            text0        000360
+__Htext1            text1        000360
+__Htext2            text2        000360
+__Htext3            text3        000360
+__LRAM              (abs)        000001
+__Lbigbss           bigbss       000008
+__Lbigdata          bigdata      000008
+__Lbss              bss          000008
+__Lclrtext          clrtext      000360
+__Lconfig           config       300000
+__Lconst            const        00035A
+__Ldata             (abs)        000000
+__Ldata0            (abs)        000000
+__Leeprom_data      eeprom_data  F00000
+__Lend_init         end_init     000014
+__Lfarbss           farbss       000000
+__Lfardata          fardata      000000
+__Libigdata         ibigdata     000360
+__Lidata            idata        00035A
+__Lidloc            idloc        200000
+__Lifardata         ifardata     000360
+__Linit             init         000000
+__Lintcode          intcode      000000
+__Lintcodelo        intcodelo    000000
+__Lintentry         intentry     000360
+__Lintret           intret       000360
+__Lintsave_regs     intsave_regs 000008
+__Lirdata           irdata       000360
+__Lmediumconst      mediumconst  00035A
+__Lnvbit            nvbit        000040
+__Lnvram            nvram        000360
+__Lnvrram           nvrram       000008
+__Lpa_nodes         pa_nodes     000360
+__Lparam            rparam       000006
+__Lparam0           param0       000360
+__Lparam1           param1       000360
+__Lparam2           param2       000360
+__Lpowerup          powerup      000000
+__Lramtop           ramtop       000300
+__Lrbit             rbit         000040
+__Lrbss             rbss         000008
+__Lrdata            rdata        000008
+__Lreset_vec        reset_vec    000000
+__Lrparam           rparam       000006
+__Lsmallconst       smallconst   000300
+__Lstruct           struct       000008
+__Ltemp             temp         000008
+__Ltext             text         000360
+__Ltext0            text0        000360
+__Ltext1            text1        000360
+__Ltext2            text2        000360
+__Ltext3            text3        000360
+__S0                (abs)        F00000
+__S1                (abs)        000200
+__accesstop         (abs)        000060
+__activetblptr      (abs)        000002
+__end_of_Load_Elbow text1        000422
+__end_of_delay      text2        000438
+__end_of_main       text0        0003E6
+__mediumconst       mediumconst  00035A
+__ramtop            ramtop       000300
+__smallconst        smallconst   000300
+_deg_base           (abs)        000000
+_deg_elbow          (abs)        000001
+_deg_grip           (abs)        000002
+_deg_r_grip         (abs)        000003
+_deg_servo          (abs)        000004
+_deg_wrist          (abs)        000005
+_delay              text2        000422
+_exit               init         000000
+_main               text0        000360
+_reg_CCP            smallconst   000301
+_reg_CON            smallconst   000351
+_reg_PDCH           smallconst   000355
+_reg_PDCL           smallconst   000341
+delay@count         rparam       000006
+intlevel0           text         000438
+intlevel1           text         000438
+intlevel2           text         000438
+intlevel3           text         000438
+start               init         000000
